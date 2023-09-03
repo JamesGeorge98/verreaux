@@ -41,13 +41,14 @@ class AppThemeData {
         fontWeight: FontWeight.bold,
       )),
       appBarTheme: AppBarTheme(
-          backgroundColor: colorScheme.primary,
-          elevation: 5,
-          centerTitle: true,
-          toolbarTextStyle: GoogleFonts.lora(),
-          titleTextStyle: GoogleFonts.lora(fontSize: 24),
-          actionsIconTheme: IconThemeData(color: colorScheme.secondary),
-          foregroundColor: colorScheme.secondary),
+        backgroundColor: colorScheme.primary,
+        foregroundColor: colorScheme.secondary,
+        elevation: 5,
+        centerTitle: true,
+        toolbarTextStyle: GoogleFonts.lora(),
+        titleTextStyle: GoogleFonts.lora(fontSize: 24, color: AppColors.black),
+        actionsIconTheme: IconThemeData(color: colorScheme.secondary),
+      ),
       primaryColor: colorScheme.primary,
       tabBarTheme: TabBarTheme(
         indicator: UnderlineTabIndicator(
