@@ -24,51 +24,46 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Stack(
-      children: [
-        SingleChildScrollView(
-          controller: _scrollController2,
-          child: Column(
+        body: SingleChildScrollView(
+      child: Stack(
+        children: [
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Expanded(
-                      child: Image.asset(
-                    AppAssets.homepage1,
-                    fit: BoxFit.cover,
-                  )),
-                  const Expanded(child: SizedBox()),
-                ],
-              ),
-              const SizedBox(
-                height: 5000,
-              )
+              Expanded(
+                  child: Image.asset(
+                AppAssets.homepage2,
+                fit: BoxFit.cover,
+              )),
+              Expanded(
+                  child: Image.asset(
+                AppAssets.homepage2,
+                color: Colors.transparent,
+                fit: BoxFit.cover,
+                colorBlendMode: BlendMode.modulate,
+              )),
             ],
           ),
-        ),
-        SingleChildScrollView(
-          controller: _scrollController,
-          child: Column(
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Stack(
-                children: [
-                  Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const Expanded(child: SizedBox()),
-                      Expanded(child: Image.asset(AppAssets.homepage2))
-                    ],
-                  ),
-                  const VerreauxAppBar(),
-                ],
-              ),
-              const Placeholder(),
-              const Placeholder(),
+              Expanded(
+                  child: Image.asset(
+                AppAssets.homepage2,
+                color: Colors.transparent,
+                fit: BoxFit.cover,
+                colorBlendMode: BlendMode.modulate,
+              )),
+              Expanded(
+                  child: Image.asset(
+                AppAssets.homepage1,
+                fit: BoxFit.cover,
+              )),
             ],
           ),
-        ),
-      ],
+          const VerreauxAppBar(),
+        ],
+      ),
     ));
   }
 }
